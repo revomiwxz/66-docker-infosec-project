@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "lastName": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "mobile": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "min": 10,
+      "max": 10,
+      "private": true,
+      "minLength": 10,
+      "maxLength": 10
+    },
+    "cardId": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "min": 13,
+      "max": 13,
+      "private": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true,
+      "minLength": 1,
+      "maxLength": 255
+    }
+  }
+}
