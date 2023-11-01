@@ -32,4 +32,12 @@ module.exports = {
         })
     
     },
+    async beforeFindOne(event) {
+        if (event.params.where.mobile) {
+            event.params.where.mobile = btoa(event.params.where.mobile);
+          }
+          if (event.params.where.cardId) {
+            event.params.where.cardId = btoa(event.params.where.cardId);
+        }
+  },
 }
